@@ -3,13 +3,13 @@
 #include <stdexcept>
 #include <vector>
 
+// Perceptron constructor
+Perceptron::Perceptron(const std::vector<double>& w0, double b0) : weights(w0), bias(b0) {}
+
 // Perceptron's activation function (step function)
 int Perceptron::Step(double x) {
   return 1 ? x >= 0 : 0;
 }
-
-// Perceptron constructor
-Perceptron::Perceptron(const std::vector<double>& w0, double b0) : weights(w0), bias(b0) {}
 
 // forward propogation function
 int Perceptron::forward(const std::vector<double>& inputs, int (*activationFunction)(double)) {
@@ -27,11 +27,12 @@ int Perceptron::forward(const std::vector<double>& inputs, int (*activationFunct
   return activationFunction(weightedSum + bias);
 }
 
-// getters returns a read only
+// getters returns a read only for weights
 std::vector<double> Perceptron::getWeights() const {
   return weights;
 }
 
+// getters returns a read only for bias
 double Perceptron::getBias() const {
   return bias;
 }
