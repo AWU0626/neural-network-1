@@ -30,12 +30,12 @@ int Perceptron::forward(
   return activationFunction(weightedSum + bias);
 }
 
-// getters returns a read only for weights
+// getter for weights
 std::vector<double> Perceptron::getWeights() {
   return weights;
 }
 
-// getters returns a read only for bias
+// getter for bias
 double Perceptron::getBias() {
   return bias;
 }
