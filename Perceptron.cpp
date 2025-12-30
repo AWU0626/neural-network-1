@@ -7,9 +7,7 @@
 Perceptron::Perceptron(const std::vector<double>& w0, double b0) : weights(w0), bias(b0) {}
 
 // Perceptron's activation function (step function)
-int Perceptron::Step(double x) {
-  return 1 ? x >= 0 : 0;
-}
+int Perceptron::Step(double x) { return 1 ? x >= 0 : 0; }
 
 // forward propogation function
 int Perceptron::forward(
@@ -31,11 +29,7 @@ int Perceptron::forward(
 }
 
 // getter for weights
-std::vector<double> Perceptron::getWeights() {
-  return weights;
-}
+std::vector<double> Perceptron::getWeights() { return weights; }
 
 // getter for bias
-double Perceptron::getBias() {
-  return bias;
-}
+double Perceptron::getBias() { return bias; }
