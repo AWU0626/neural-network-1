@@ -20,14 +20,14 @@ int Perceptron::forward(
     throw std::invalid_argument("Size mismatch. Input size does not match weight size.");
   }
 
-  double weightedSum = 0.0;
-  int n = weights.size();
+  double dotProduct = 0.0;
+  size_t n = weights.size();
   
-  for (int i = 0; i < n; i++) {
-    weightedSum += inputs[i] * weights[i];
+  for (size_t i = 0; i < n; i++) {
+    dotProduct += inputs[i] * weights[i];
   }
 
-  return activationFunction(weightedSum + bias);
+  return activationFunction(dotProduct + bias);
 }
 
 // getter for weights

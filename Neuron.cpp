@@ -1,5 +1,6 @@
 #include "Neuron.h"
 #include <algorithm>
+#include <cstddef>
 #include <stdexcept>
 #include <vector>
 
@@ -28,7 +29,14 @@ double Neuron::forward(
     throw std::invalid_argument("Size mismatch. Input size does not match weight size.");
   }
 
-  return 0.0;
+  double dotProduct = 0.0;
+  size_t n = weights.size();
+
+  for (size_t i = 0; i < n; i++) {
+    dotProduct += inputs[i] * weights[i];
+  }
+
+  return activationFunction(dotProduct + bias);
 }
 
 // getter for weights
