@@ -12,7 +12,10 @@ int Perceptron::Step(double x) {
 }
 
 // forward propogation function
-int Perceptron::forward(const std::vector<double>& inputs, int (*activationFunction)(double)) {
+int Perceptron::forward(
+  const std::vector<double>& inputs, 
+  int (*activationFunction)(double)
+) {
   if (inputs.size() != weights.size()) {
     throw std::invalid_argument("Size mismatch. Input size does not match weight size.");
   }
