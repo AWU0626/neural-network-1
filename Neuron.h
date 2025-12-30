@@ -20,8 +20,8 @@ class Neuron {
     double forward(const std::vector<double>& input, double (*activationFunction)(double));
 
     // getters
-    std::vector<double> getWeights() const;
-    double getBias() const;
+    std::vector<double> getWeights();
+    double getBias();
 };
 
 #endif // Neuron.h

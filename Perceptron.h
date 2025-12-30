@@ -17,8 +17,8 @@ class Perceptron {
     int forward(const std::vector<double>& input, int (*activationFunction)(double));
 
     // getter
-    std::vector<double> getWeights() const;
-    double getBias() const;
+    std::vector<double> getWeights();
+    double getBias();
 };
 
 #endif // Perceptron.h

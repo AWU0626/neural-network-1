@@ -31,11 +31,11 @@ int Perceptron::forward(
 }
 
 // getters returns a read only for weights
-std::vector<double> Perceptron::getWeights() const {
+std::vector<double> Perceptron::getWeights() {
   return weights;
 }
 
 // getters returns a read only for bias
-double Perceptron::getBias() const {
+double Perceptron::getBias() {
   return bias;
 }

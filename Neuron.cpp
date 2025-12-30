@@ -31,12 +31,12 @@ double Neuron::forward(
   return 0.0;
 }
 
-// getters returns a read only for weights
-std::vector<double> Neuron::getWeights() const {
+// getter for weights
+std::vector<double> Neuron::getWeights() {
   return weights;
 }
 
-// getters returns a read only for bias
-double Neuron::getBias() const {
+// getter for bias
+double Neuron::getBias() {
   return bias;
 }
