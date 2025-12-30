@@ -10,10 +10,13 @@ class Perceptron {
   public:
     Perceptron(const std::vector<double>& w0, double b0);
 
+    // activation function
     int Step(double x);
     
+    // forward propogation
     int forward(const std::vector<double>& input, int (*activationFunction)(double));
 
+    // getter
     std::vector<double> getWeights() const;
     double getBias() const;
 };
